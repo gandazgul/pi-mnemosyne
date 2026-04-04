@@ -1,0 +1,33 @@
+{
+  "name": "pi-mnemosyne",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pi extension for local persistent memory using Mnemosyne — offline semantic search, no cloud required",
+  "author": "gandazgul",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gandazgul/mnemosyne.git",
+    "directory": "pi-mnemosyne"
+  },
+  "keywords": [
+    "pi-package",
+    "mnemosyne",
+    "memory",
+    "local",
+    "offline",
+    "semantic-search",
+    "ai",
+    "coding-agent"
+  ],
+  "pi": {
+    "extensions": ["./"]
+  },
+  "files": [
+    "index.ts",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": ">=0.53.0"
+  }
+}
