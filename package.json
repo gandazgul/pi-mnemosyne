@@ -21,7 +21,9 @@
     "coding-agent"
   ],
   "pi": {
-    "extensions": ["./"]
+    "extensions": [
+      "./"
+    ]
   },
   "files": [
     "index.ts",
@@ -29,5 +31,8 @@
   ],
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": ">=0.53.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2"
   }
 }
