@@ -144,7 +144,7 @@ export default function mnemosyneExtension(pi: ExtensionAPI): void {
 When to use memory:
 - Search memory when past context would help answer the user's request.
 - Store concise summaries of important decisions, preferences, and patterns.
-- Delete outdated memories when new decisions contradict them.
+- Delete outdated memories when new decisions contradict them. Recall results include a document ID in square brackets (e.g. [42]). Pass that numeric ID to memory_delete to remove the memory.
 - Use **core** for facts that should always be in context (project architecture, key conventions, user preferences).
 - Use **global** variants for cross-project preferences (coding style, tool choices).
 - At the end of a session, store any relevant memories for future sessions.`;
@@ -339,6 +339,10 @@ When to use memory:
 		description:
 			"Delete an outdated or incorrect memory by its document ID (shown in [brackets] in recall/list results).",
 		promptSnippet: "Delete an outdated memory by document ID",
+		promptGuidelines: [
+			"Use memory_delete to remove outdated, incorrect, or superseded memories.",
+			"First call memory_recall to find the memory. The document ID is shown in [brackets] (e.g. [42]) in recall and list results. Pass that numeric ID to memory_delete.",
+		],
 		parameters: Type.Object({
 			id: Type.Number({ description: "Document ID to delete" }),
 		}),
